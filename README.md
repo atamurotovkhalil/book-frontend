@@ -18,7 +18,7 @@
 ### 설치
 1. 저장소 복제:
 ```sh
-git clone <repository-url>
+git clone https://github.com/atamurotovkhalil/book-frontend.git
 cd book-frontend
 ```
 2. 종속성 설치:
@@ -66,5 +66,3 @@ book-frontend/
 ## 기여
 프로젝트를 개선하기 위해 자유롭게 이슈나 풀 리퀘스트를 제출하세요.
 
-## 라이센스
-이 프로젝트는 [MIT 라이센스](LICENSE)에 따라 라이센스되었습니다.
