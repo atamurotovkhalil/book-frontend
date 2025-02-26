@@ -1,50 +1,70 @@
-# React + TypeScript + Vite
+# Book Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+이것은 React, Vite, Tailwind CSS로 구축된 프런트엔드 프로젝트입니다. 책 관련 애플리케이션의 사용자 인터페이스 역할을 합니다.
 
-Currently, two official plugins are available:
+## 기능
+- UI 구성 요소를 구축하기 위한 **React 19**
+- 빠른 개발 및 번들링을 위한 **Vite**
+- 스타일링을 위한 **Tailwind CSS**
+- 상태 관리를 위한 **Zustand**
+- 유형 안전을 위한 **TypeScript**
+- 코드 품질 강화를 위한 **ESLint**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 시작하기
 
-## Expanding the ESLint configuration
+### 필수 조건
+[Node.js](https://nodejs.org/)가 설치되어 있는지 확인하세요.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 설치
+1. 저장소 복제:
+```sh
+git clone <repository-url>
+cd book-frontend
+```
+2. 종속성 설치:
+```sh
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 개발
+개발 서버를 시작하려면 다음을 실행합니다.
+```sh
+npm run dev
 ```
+이렇게 하면 Vite 개발 서버가 시작됩니다.
+
+### 빌드
+프로덕션 빌드를 만들려면 다음을 실행합니다.
+```sh
+npm run build
+```
+
+### Lint
+린팅 문제를 확인하려면 다음을 실행합니다.
+```sh
+npm run lint
+```
+
+### 미리보기
+프로덕션 빌드를 로컬에서 미리 보려면 다음을 실행합니다.
+```sh
+npm run preview
+```
+
+## 프로젝트 구조
+```
+book-frontend/
+├── src/ # 소스 코드
+├── public/ # 정적 에셋
+├── index.html # 기본 HTML 파일
+├── tsconfig.json # TypeScript 구성
+├── vite.config.ts # Vite 구성
+├── package.json # 프로젝트 종속성 및 스크립트
+└── README.md # 문서
+```
+
+## 기여
+프로젝트를 개선하기 위해 자유롭게 이슈나 풀 리퀘스트를 제출하세요.
+
+## 라이센스
+이 프로젝트는 [MIT 라이센스](LICENSE)에 따라 라이센스되었습니다.
